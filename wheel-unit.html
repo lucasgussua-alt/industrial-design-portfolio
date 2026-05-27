@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wheel Unit | Lucas Industrial Design Portfolio</title>
+  <meta name="description" content="Wheel Unit case study by Lucas Gustavsson: an electrically actuated wheel unit for the Royal Swedish Opera.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Jersey+10&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Lucas portfolio home">
+      <span class="brand-mark"></span>
+      Lucas
+    </a>
+    <nav>
+      <a href="index.html#profile">Profile</a>
+      <a href="index.html#work">Work</a>
+      <a href="mailto:lucas.gustavsson@ownit.nu" class="nav-action">Contact</a>
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <a class="back-link" href="index.html#work">Back to work</a>
+
+    <section class="project-hero" aria-labelledby="project-title">
+      <div>
+        <p class="eyebrow">The Royal Swedish Opera</p>
+        <h1 id="project-title">Wheel Unit</h1>
+        <p>
+          Driven by increasingly complex stage designs, the Royal Swedish Opera (Kungliga Operan) needed to 
+          redesign their existing 'Wheel Unit.' This motorized wheel is used to both remotely control the 
+          movement of heavy set pieces on stage and actuate a lifting mechanism to lock them securely in 
+          place. The legacy solution relied on a confusing and potentially unsafe hybrid of electric and 
+          pneumatic systems. The brief was to overhaul the unit, focusing on a purely electrical solution 
+          that prioritized user safety and intuitive operation.
+        </p>
+      </div>
+      <img src="images/wheel-front.png" alt="Wheel Unit project image">
+    </section>
+
+    <section class="case-story" aria-label="Wheel unit case study sections">
+      <!-- Image-led section: keep text short and let the gallery carry the story. -->
+
+      <article class="case-section media-stack">
+        <div class="case-copy case-copy-stack">
+          <div class="case-note">
+            <p class="eyebrow">On-site research</p>
+            <p>
+              We were invited backstage during a live performance to observe the crew both during the high-stress 
+              intermission scene changes and after the show. Witnessing this hectic environment firsthand made it 
+              clear that the new unit had to be incredibly reliable and intuitive enough to operate on "autopilot." 
+              Interviews with the stage technicians provided critical insights into the real-world flaws of the 
+              existing unit.
+            </p>
+          </div>
+          <div class="case-note">
+            <p class="eyebrow">Risks & technical requirements</p>
+            <p>
+              Operating with stage scenery weighing up to 4,000 kg meant that any mechanical malfunction could have 
+              catastrophic consequences. Together with the Royal Swedish Opera, we conducted an extensive risk 
+              assessment. A core requirement was a fail-safe braking system: the unit's default state must always 
+              be locked unless active input is given.
+
+              Additionally, the opera's stage floor features a 4% incline. This constraint added significant 
+              complexity, as every calculation and simulation had to account for the resulting lateral force 
+              components acting on the unit.
+            </p>
+          </div>
+        </div>
+        <!--
+          Gallery options:
+          - .case-gallery = one large image
+          - .stacked = multiple large images stacked vertically, best for mixed aspect ratios
+          - .two-up / .three-up = multiple columns
+          - add class="natural" to a figure to keep the image's original aspect ratio
+          - add class="wide-shot" or "tall-shot" to force a wide or tall frame
+        -->
+        <div class="case-gallery">
+          <figure class="natural">
+            <img src="images/wheel-visit.png" alt="Collected images from the on-site visit">
+            <figcaption>Collected images from the on-site visit.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="case-section reverse">
+        <div class="case-copy">
+          <p class="eyebrow">Brake system</p>
+          <p>
+            After analysing the forces of the worst case scenario (that being their heaviest decor), 
+            and a large safety factor, the resulting forces required to brake the wheels was calculated. 
+            For larger set pieces, four wheel units are used and since they use a self-locking worm gear, 
+            that proved enough to lock the wheels. The friction coefficient was calculated in case the 
+            wheels would start sliding, but given the material of the wheels, it was safe from this as well.
+          </p>
+        </div>
+        <div class="case-gallery">
+          <figure class="natural">
+            <img src="images/wheel-brakes.png" alt="Wheel brakes">
+            <figcaption>The wheel of the unit.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="case-section">
+        <div class="case-copy">
+          <p class="eyebrow">Brackets</p>
+          <p>
+            The old system was attached in the centre line of the unit. This caused a torque in the wheel 
+            which caused it to ever so slightly veer to the side. To accommodate for this, the attachment 
+            point was moved to be in line with the wheel itself, and a third bracket was installed to stabilise 
+            it. While the motor itself now contributed to some torque, the amount was almost negligible compared 
+            to the force that came from the decor.
+          </p>
+        </div>
+        <div class="case-gallery">
+          <figure class="natural">
+            <img src="images/wheel-brackets.png" alt="Wheel brackets">
+            <figcaption>The legacy unit side by side with the new unit.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="case-section reverse">
+        <div class="case-copy">
+          <p class="eyebrow">The lift & lower system</p>
+          <p>
+            After evaluating various concepts, including scissor lifts and sliders, the legacy pneumatic system was 
+            replaced with a robust lead screw mechanism. In this new architecture, the unit's main chassis acts as a 
+            traveling nut, "climbing" as the lead screw rotates.
+          </p>
+          <p>
+            Driven by a programmable stepper motor, the system precise-counts its rotations to know exactly when the 
+            wheel reaches the ground. This turned a previously unpredictable, manual guessing game into an intuitive, 
+            single-button operation. To ensure the housing could withstand the immense loads of the scenery, rigorous 
+            material selection and Finite Element Analysis (FEA) were conducted.
+          </p>
+        </div>
+        <div class="case-gallery">
+          <figure class="natural">
+            <img src="images/wheel-lift-lower.png" alt="Wheel lift and lower">
+            <figcaption>Stepper motor controlling a lead screw mechanism.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="case-section media-stack">
+        <div class="case-copy">
+          <p class="eyebrow">The suspension system</p>
+          <p>
+            Eliminating the pneumatics meant losing the inherent cushioning they provided. A new 
+            suspension was critical, as the historic stage floor can unevenly deviate by up to 20 mm. 
+            Following an extensive ideation phase, a dedicated spring assembly was developed.
+          </p>
+          <p>
+            The assembly features four guided springs that can be pre-loaded via adjustment screws to 
+            match the specific weight of the scenery. To accommodate drastic weight variations, three 
+            interchangeable spring packages were designed. At the base, a ball joint connects the assembly 
+            to the main body, allowing the lead screw and suspension to pivot freely during actuation.
+          </p>
+        </div>
+        <!--
+          Gallery options:
+          - .case-gallery = one large image
+          - .stacked = multiple large images stacked vertically, best for mixed aspect ratios
+          - .two-up / .three-up = multiple columns
+          - add class="natural" to a figure to keep the image's original aspect ratio
+          - add class="wide-shot" or "tall-shot" to force a wide or tall frame
+        -->
+        <div class="case-gallery stacked">
+          <figure class="natural">
+            <img src="images/wheel-sketches.png" alt="Suspension system sketches">
+            <figcaption>Brainstorming different suspension systems.</figcaption>
+          </figure>
+          <figure class="natural">
+            <img src="images/wheel-springs.png" alt="Different spring packages.">
+            <figcaption>Different spring packages.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="case-wide-section">
+        <figure class="natural">
+            <img src="images/wheel-exploded.png" alt="Hero">
+        </figure>
+      </article>
+
+    </section>
+
+  </main>
+</body>
+</html>
